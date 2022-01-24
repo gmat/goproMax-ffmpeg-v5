@@ -32,5 +32,6 @@ extern const char *ff_opencl_source_tonemap;
 extern const char *ff_opencl_source_transpose;
 extern const char *ff_opencl_source_unsharp;
 extern const char *ff_opencl_source_xfade;
+extern const char *ff_opencl_source_gopromax;
 
 #endif /* AVFILTER_OPENCL_SOURCE_H */

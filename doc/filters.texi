@@ -24200,6 +24200,32 @@ Apply dilation filter with threshold0 set to 30, threshold1 set 40, threshold2 s
 @end example
 @end itemize
 
+@section gopromax_opencl
+
+Apply transformation of the two GoPro Max video streams to equirectangular or equiangular-cubemap projection.
+
+This filter is designed to use directly GoPro .360 files.
+
+It accepts the following options:
+
+@table @option
+
+@item eac
+If @code{1} the ouptut is EAC. If @code{0} (default) the ouptut is equirectangular. Native .360 files are sort of EAC files, in fact the front and rear lenses streams are the top and the bottom of the EAC projection. The .360 contains also 2x64 bits of overlapped area. The filter removes these two areas.
+If eac option is not specified, the output is equirectangular.
+
+@end table
+
+@subsection Example
+
+@itemize
+@item
+Convert .360 to equirectangular with OpenCL 0:1 device.
+@example
+-i INPUT -hwaccel auto -hwaccel auto -init_hw_device opencl:0.1 -filter_hw_device opencl0 -v verbose  -filter_complex '[0:0]format=yuv420p,hwupload[a] , [0:4]format=yuv420p,hwupload[b], [a][b]gopromax_opencl, hwdownload,format=yuv420p' OUTPUT
+@end example
+@end itemize
+
 @section nlmeans_opencl
 
 Non-local Means denoise filter through OpenCL, this filter accepts same options as @ref{nlmeans}.

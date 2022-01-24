@@ -486,6 +486,7 @@ extern const AVFilter ff_vf_vignette;
 extern const AVFilter ff_vf_vmafmotion;
 extern const AVFilter ff_vf_vpp_qsv;
 extern const AVFilter ff_vf_vstack;
+extern const AVFilter ff_vf_gopromax_opencl;
 extern const AVFilter ff_vf_w3fdif;
 extern const AVFilter ff_vf_waveform;
 extern const AVFilter ff_vf_weave;
