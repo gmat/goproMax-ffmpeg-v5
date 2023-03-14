@@ -356,12 +356,18 @@ static const VulkanOptExtension optional_device_exts[] = {
 #endif
 
     /* Video encoding/decoding */
+    /* They're not currently used, so they're not needed
+     * Vulkan stabilized the decode extensions and their
+     * name prefixes were changed from EXT to KHR.
+     */
+    /*
     { VK_KHR_VIDEO_QUEUE_EXTENSION_NAME,                      FF_VK_EXT_NO_FLAG                },
     { VK_KHR_VIDEO_DECODE_QUEUE_EXTENSION_NAME,               FF_VK_EXT_NO_FLAG                },
     { VK_KHR_VIDEO_ENCODE_QUEUE_EXTENSION_NAME,               FF_VK_EXT_NO_FLAG                },
     { VK_EXT_VIDEO_ENCODE_H264_EXTENSION_NAME,                FF_VK_EXT_NO_FLAG                },
     { VK_EXT_VIDEO_DECODE_H264_EXTENSION_NAME,                FF_VK_EXT_NO_FLAG                },
     { VK_EXT_VIDEO_DECODE_H265_EXTENSION_NAME,                FF_VK_EXT_NO_FLAG                },
+    */
 };
 
 /* Converts return values to strings */
